@@ -2,7 +2,7 @@
 
 <div class="container">
     <h1 class="text-center">{{ self.title }}</h1>
-    <div class="card-deck">
+    <div class="card-group">
         {% for card in self.cards %}
             {% image card.image fill-300x200 as img %}
             <div class="card">
