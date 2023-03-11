@@ -1,7 +1,10 @@
 from django.db import models
 
 from wagtail.models import Page
-from wagtail.admin.panels import FieldPanel, StreamFieldPanel
+from wagtail.admin.panels import (
+    FieldPanel,
+    StreamFieldPanel,
+)
 from wagtail.core.fields import StreamField
 
 from streams import blocks
@@ -16,6 +19,7 @@ class FlexPage(Page):
             ("full_richtext", blocks.RichTextBlock()),
             ("simple_richtext", blocks.SimpleRichTextBlock()),
             ("cards", blocks.CardBlock()),
+            ("cta", blocks.CTABlock()),
         ],
         null=True, blank=True
     )
